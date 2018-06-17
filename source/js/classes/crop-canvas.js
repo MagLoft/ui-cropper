@@ -184,6 +184,8 @@ angular.module('uiCropper').factory('cropCanvas', [function() {
 
             // draw part of original image
             if (size.w > 0) {
+                ctx.fillStyle = '#FFFFFF'
+                ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height)
                 ctx.drawImage(image, xLeft * xRatio, yTop * yRatio, Math.abs(size.w * xRatio), Math.abs(size.h * yRatio), xLeft, yTop, Math.abs(size.w), Math.abs(size.h));
             }
 
